@@ -48,6 +48,8 @@
       <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_controller/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_gui/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vmm/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_cfg_builder/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_vm/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/vmm/cvm_controller/target" />
       <excludeFolder url="file://$MODULE_DIR$/vmm/cvm_gui/target" />

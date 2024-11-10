@@ -1,7 +1,21 @@
 use eframe::egui;
 use cvm_controller;
-
+use cvm_vm;
 pub fn gui_main() {
+    let linux_test = cvm_vm::generate_cfg(
+        &cvm_vm::snix::Vm{
+            kernel: "./bzImage".to_string(),
+            kernel_params: vec!["test=value".to_string()],
+            initrd: Some("./initrd.img".to_string()),
+            disks: vec![
+                cvm_vm::snix::Block{
+                    path: "./rootfs".to_string(),
+                    root: true,
+                }
+            ],
+        }
+    );
+
     let native_options = eframe::NativeOptions::default();
     eframe::run_native("My egui App", native_options, Box::new(|cc| Ok(Box::new(VmmGui::new(cc)))))
         .expect("Unable to create eframe native application");
