@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/base/base_event_token_derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/base/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/base/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/bit_field/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/bit_field/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/common/audio_streams/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/common/balloon_control/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/common/data_model/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/common/sync/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_async/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_async/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_fdt/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_tracing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_tracing/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/cros_tracing_types/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/crosvm_control/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/hypervisor/hypervisor_test_macro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/hypervisor/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/hypervisor/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/io_uring/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/io_uring/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/jail/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/jail/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/kvm_sys/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/kvm_sys/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/metrics/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/metrics_events/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/perfetto/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/proto_build_tools/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/protos/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/resources/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/rutabaga_gfx/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/serde_keyvalue/serde_keyvalue_derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/serde_keyvalue/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/swap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/swap/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vendor/generic/crypto/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vendor/generic/metrics/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vendor/generic/metrics_events/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vendor/generic/vm_control/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vm_control/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/vm_memory/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crosvm/win_util/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_controller/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vmm/cvm_gui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vmm/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+      <excludeFolder url="file://$MODULE_DIR$/vmm/cvm_controller/target" />
+      <excludeFolder url="file://$MODULE_DIR$/vmm/cvm_gui/target" />
+      <excludeFolder url="file://$MODULE_DIR$/vmm/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

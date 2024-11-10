@@ -1,0 +1,26 @@
+[package]
+name = "vmm"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "snix-vmm"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.29.1"
+cvm_gui = {path = "cvm_gui" }
+
+[workspace]
+members = ["cvm_gui", "cvm_controller"]
+
+[workspace.dependencies]
+tokio = { version = "1.29.1", features = ["net", "rt-multi-thread", "time", "sync", "macros"] }
+
+[patch.crates-io]
+audio_streams = { path = "../crosvm/common/audio_streams" }
+cros_async = { path = "../crosvm/cros_async" }
+data_model = { path = "../crosvm/common/data_model" }
+libcras = { path = "../crosvm/libcras_stub" } # ignored by ebuild
+sync = { path = "../crosvm/common/sync" }
+minijail = { path = "../crosvm/third_party/minijail/rust/minijail" } # ignored by ebuild

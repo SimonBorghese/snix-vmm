@@ -1,0 +1,3 @@
+[submodule "crosvm"]
+	path = crosvm
+	url = https://github.com/google/crosvm
