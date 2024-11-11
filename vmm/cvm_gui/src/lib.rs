@@ -1,6 +1,5 @@
 use eframe::egui;
 use cvm_controller;
-use cvm_vm;
 pub fn gui_main() {
     let native_options = eframe::NativeOptions::default();
     eframe::run_native("My egui App", native_options, Box::new(|cc| Ok(Box::new(VmmGui::new(cc)))))
@@ -14,7 +13,7 @@ struct VmmGui {
 }
 
 impl VmmGui {
-    fn new(cc: &eframe::CreationContext<'_>) -> Self {
+    fn new(_cc: &eframe::CreationContext<'_>) -> Self {
         // Customize egui here with cc.egui_ctx.set_fonts and cc.egui_ctx.set_visuals.
         // Restore app state using cc.storage (requires the "persistence" feature).
         // Use the cc.gl (a glow::Context) to create graphics shaders and buffers that you can use
@@ -24,7 +23,7 @@ impl VmmGui {
 }
 
 impl eframe::App for VmmGui {
-    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Hello World!");
             if ui.text_edit_singleline(&mut self.socket).changed(){
