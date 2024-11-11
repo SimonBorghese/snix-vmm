@@ -21,6 +21,5 @@ tokio = { version = "1.29.1", features = ["net", "rt-multi-thread", "time", "syn
 audio_streams = { path = "../crosvm/common/audio_streams" }
 cros_async = { path = "../crosvm/cros_async" }
 data_model = { path = "../crosvm/common/data_model" }
-libcras = { path = "../crosvm/libcras_stub" } # ignored by ebuild
 sync = { path = "../crosvm/common/sync" }
 minijail = { path = "../crosvm/third_party/minijail/rust/minijail" } # ignored by ebuild

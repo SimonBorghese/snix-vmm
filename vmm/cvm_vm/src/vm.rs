@@ -28,4 +28,6 @@ pub struct CrosVmCmdLine{
 }
 pub trait CrosVmConfig{
     fn generate_config(&self) -> Vec<CrosVmCmdLine>;
+
+    fn generate_vm(&mut self, cfg: String);
 }

@@ -1,27 +1,29 @@
-use crate::vm::{CrosVmCmdLine, CrosVmParam};
+use crate::vm::{CrosVmParam};
 
 pub mod vm;
 pub mod snix;
 
 fn match_cfg_key(cmd_line: CrosVmParam, data: &mut json::JsonValue) -> json::JsonValue{
     match cmd_line{
-        CrosVmParam::Value(Value) => {
-            Value.into()
+        CrosVmParam::Value(value) => {
+            value.into()
         }
-        CrosVmParam::Bool(Value) => {
-            Value.into()
+        CrosVmParam::Bool(value) => {
+            value.into()
         }
-        CrosVmParam::Map(Map) => {
+        CrosVmParam::Map(map) => {
             let mut sub_object = json::JsonValue::new_object();
-            for item in Map{
+            for item in map {
+                // Recurse until we find an actual value or bool
                 sub_object[item.0] = match_cfg_key(item.1, data);
             }
             sub_object
         }
-        CrosVmParam::List(List) => {
+        CrosVmParam::List(list) => {
             let mut sub_object = vec![];
 
-            for item in List{
+            for item in list {
+                // Each sub object of a list could be a value, bool, map, or another list
                 sub_object.push(match_cfg_key(item, data));
             }
 
@@ -30,7 +32,7 @@ fn match_cfg_key(cmd_line: CrosVmParam, data: &mut json::JsonValue) -> json::Jso
     }
 }
 
-pub fn generate_cfg(vm_spec: &dyn vm::CrosVmConfig){
+pub fn generate_cfg(vm_spec: &dyn vm::CrosVmConfig) -> String{
     let mut data = json::JsonValue::new_object();
 
     let cfg_data = vm_spec.generate_config();
@@ -39,5 +41,5 @@ pub fn generate_cfg(vm_spec: &dyn vm::CrosVmConfig){
         data[cfg.name.as_str()] = match_cfg_key(cfg.params, &mut data);
     }
 
-    println!("{}", json::stringify(data));
+    json::stringify(data)
 }
