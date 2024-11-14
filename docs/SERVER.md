@@ -65,6 +65,8 @@ integer can determine the permissions of a socket
 #### Socket API
 The following defines the API for the sockets
 
+---
+
 ##### Example API, Version 3
 * Command Number: 0
 * Required Permissions: PERM_EXAMPLE
@@ -88,6 +90,8 @@ The following defines the API for the sockets
 0             # Success
 ```
 
+---
+
 ##### Get Socket Permissions, Version 1
 * Command Number: 1
 * Required Permissions: PERM_VIEW_LOCAL_STATE
@@ -106,6 +110,8 @@ The following defines the API for the sockets
 7   # 00...111 (PERM_VIEW_LOCAL_STATE, PERM_MANAGE_LOCAL_VM, PERM_RUN_LOCAL_VM)
 ```
 
+---
+
 ##### Get Local VM Count, Version 1
 * Command Number: 2
 * Required Permissions: PERM_MANAGE_LOCAL_VM
@@ -123,6 +129,8 @@ The following defines the API for the sockets
 2,1
 4   # 4 Local Virtual Machines
 ```
+
+---
 
 ##### Get Local UID From Index, Version 1
 * Command Number: 3
@@ -148,6 +156,8 @@ OR
 16,NO VM AT INDEX 7     # Note the lack of semicolons in the output
 ```
 
+---
+
 ##### Get Local VM UIDs, Version 1
 * Command Number: 4
 * Required Permissions: PERM_MANAGE_LOCAL_VM
@@ -170,6 +180,8 @@ OR
 4,1
 12,NO VMS FOUND     # Note the lack of semicolons in the output
 ```
+
+---
 
 ##### Get Local VM Config, Version 1
 * Command Number: 5
@@ -194,6 +206,8 @@ OR
 5,1
 12,NO UID ABCD7    # Note the lack of semicolons in the output
 ```
+
+---
 
 ##### Create Local VM, Version 1
 * Command Number: 6
@@ -220,6 +234,8 @@ OR
 13,INVALID NAME!    # Note the length of the string is NOT divisible by 2
 ```
 
+---
+
 ##### Get Local VM Max Kernel Size, Version 1
 * Command Number: 7
 * Required Permissions: PERM_VIEW_LOCAL_STATE
@@ -237,6 +253,8 @@ OR
 7,1
 64000000    # 64 megabytes in bytes
 ```
+
+---
 
 ##### Upload Local VM Kernel, Version 1
 * Command Number: 8
@@ -264,6 +282,8 @@ OR
 8,1
 14,KERNEL TOO BIG
 ```
+
+---
 
 ##### Execute VM, Version 1
 * Command Number: 9
