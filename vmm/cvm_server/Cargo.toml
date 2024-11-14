@@ -1,0 +1,8 @@
+[package]
+name = "cvm_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cvm_vm = { path = "../cvm_vm" }
+cvm_controller = { path = "../cvm_controller" }

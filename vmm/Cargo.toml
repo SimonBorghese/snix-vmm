@@ -12,7 +12,7 @@ eframe = "0.29.1"
 cvm_gui = {path = "cvm_gui" }
 
 [workspace]
-members = ["cvm_gui", "cvm_controller", "cvm_vm"]
+members = ["cvm_gui", "cvm_controller", "cvm_vm", "cvm_server"]
 
 [workspace.dependencies]
 tokio = { version = "1.29.1", features = ["net", "rt-multi-thread", "time", "sync", "macros"] }
