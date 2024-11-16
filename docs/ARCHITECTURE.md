@@ -23,6 +23,9 @@ From the file system, this should appear as:
 
 Where [POOL_NAME] refers to an ASCII representation of the pool name.
 
+The associated .json file MUST contain the following keys
+* "size" : Size of the image in bytes
+
 When [POOL_NAME].img is mounted, the VM pool (i.e. root of the file system) should have the following file structure:
 
 * vms.json
@@ -35,6 +38,16 @@ When [POOL_NAME].img is mounted, the VM pool (i.e. root of the file system) shou
 
 Where [HASH] refers to a hash of the Virtual Machine's name (The hash can be built any way the server desires, here it 
 is built using Rust's built-in hashing system)
+
+###### vms.json will have the following spec:
+* An Array of JSON Objects with the follow keys per array object
+  * "name" : Name of the virtual machine: String
+  * "lnh" : The last hash of the name (for debugging purposes)
+
+###### [HASH]_vmcfg.cfg should be the stored location of crosvm compatible configurations
+###### [HASH].vmLinuz should be a valid linux image
+###### [HASH].initrd.img should be a valid init ramfs image
+###### [HASH].root.img should be a mutable disk that contains the root FS.
 
 #### VM Pools: From the program's perspective
 A VM pool should be an instance of the vm_pool struct which should have an impl block. To initialize a VM pool, the
